@@ -9,10 +9,7 @@ import circus.stuff.Equipment;
 import circus.stuff.Ladder;
 
 import java.util.ArrayList;
-<<<<<<< .merge_file_9GyJ9H
-=======
 import java.util.Arrays;
->>>>>>> .merge_file_HDSSMy
 
 public class Circus {
     private static Animal[] animals = {
