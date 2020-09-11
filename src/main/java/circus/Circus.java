@@ -9,6 +9,10 @@ import circus.stuff.Equipment;
 import circus.stuff.Ladder;
 
 import java.util.ArrayList;
+<<<<<<< .merge_file_9GyJ9H
+=======
+import java.util.Arrays;
+>>>>>>> .merge_file_HDSSMy
 
 public class Circus {
     private static Animal[] animals = {
@@ -46,6 +50,7 @@ public class Circus {
         makeAnimalsTalk();
         System.out.println("Total value of equipments " + calculateValue(equipments));
         System.out.println("Total value of animals " + calculateValue(animals));
+<<<<<<< .merge_file_9GyJ9H
         Cage<Duck> duckCage = new Cage<>();
         Duck duck = new Duck();
         duckCage.lockUp(duck);
@@ -59,6 +64,36 @@ public class Circus {
 
         for(Cage c: cages) {
             c.release();
+=======
+
+//        System.out.println(animals.length);
+//        animals[2] = new Duck("Louie");
+//        System.out.println(animals.length);
+
+        ArrayList<Animal> animalArrayList = new ArrayList<>(Arrays.asList(animals));
+
+        animalArrayList.add(new Duck("Goose"));
+        animalArrayList.add(new Parrot("Dolly"));
+        Duck louie = new Duck("Louie");
+        animalArrayList.add(louie);
+
+        for (Animal a: animalArrayList) {
+            System.out.println(a);
+        }
+
+        System.out.println("Louie is at index: " + animalArrayList.indexOf(louie));
+
+        animalArrayList.sort(Animal.AnimalNameComparator);
+        for (Animal a: animalArrayList) {
+            System.out.println(a);
+        }
+
+        System.out.println("Louie is at index: " + animalArrayList.indexOf(louie));
+        animalArrayList.remove(louie);
+
+        for (Animal a: animalArrayList) {
+            System.out.println(a);
+>>>>>>> .merge_file_HDSSMy
         }
     }
 }
